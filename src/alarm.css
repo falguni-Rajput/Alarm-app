@@ -1,0 +1,95 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-alarm {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) brightness(0.5);
+  z-index: -1;
+}
+
+.setalarm {
+  width: 90%;           /* changed width */
+  max-width: 400px;     /* cap for desktop */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.setalarm label {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.setalarm input[type="time"] {
+  width: 100%;           /* adjust to container */
+  max-width: 180px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  text-align: center;
+  height: 50px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.setalarm button {
+  background: #10100f;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.setalarm button:hover {
+  background: #ff5722;
+  transform: scale(1.05);
+}
+
+.textcard {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ffda79;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}

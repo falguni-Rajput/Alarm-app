@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.clock-container {
+  position: relative;
+  width: 100vw;
+  height: 500px; /* fullscreen */
+  display: flex;
+  flex-direction: column; /* stack clock + cards vertically */
+  align-items: center; /* horizontal center */
+  justify-content: flex-start; /* start from top */
+  overflow: hidden;
+  padding-top: 50px; /* spacing from top */
+  background: linear-gradient(to bottom, #0b0c2a, #1b1c3a);
+}
+
+/* Background Image */
+.night-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) brightness(0.5);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5); /* optional overlay */
+  z-index: 1;
+}
+
+/* Clock Wrapper */
+.clock-wrapper {
+  position: relative;
+  height: 60vh; /* vertical space for clock */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Clock */
+.clock {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 6px solid #979191;
+  background: radial-gradient(circle at center, #c0afaf, #f3eeee);
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.6), 0 0 25px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* Hour Hand */
+.right-hands {
+  position: absolute;
+  height: 120px;
+  width: 10px;
+  background-color: #333;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  border-radius: 6px;
+  z-index: 3;
+}
+
+/* Minute Hand */
+.left-hands {
+  position: absolute;
+  height: 150px;
+  width: 6px;
+  background-color: rgb(3, 3, 3);
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  border-radius: 6px;
+  z-index: 3;
+}
+
+/* Center Dot */
+.dot {
+  position: absolute;
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+/* Optional Clock Glow */
+.clock::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(255,255,255,0.2);
+  z-index: 2;
+}
+/* Digital Time */
+.digital-time {
+  position: absolute; /* floats independently */
+  top: 90%;           /* just above the cards */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;        /* white text */
+  font-size: 2rem;    /* big enough to read */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  z-index: 4;         /* above clock and background */
+  background: rgba(0, 0, 0, 0.3); /* subtle transparent bg */
+  padding: 5px 50px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

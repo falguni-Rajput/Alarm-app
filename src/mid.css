@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.alrmstyle{
+  width: 100vw;         /* full viewport width */
+  height: 500px;        /* full viewport height */
+   object-fit: cover;
+  filter: blur(5px);    /* image blur */
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5); /* optional overlay */
+  display: block;       /* inline gap remove karne ke liye */
+}
+.mid-container {
+  position: relative; 
+  width: 100vw;
+  height: 500px;        /* parent bhi full height */
+  overflow: hidden;     /* scroll remove karne ke liye */
+  margin: 0 auto;
+}
+/* Heading overlay on image */
+.overlay-text {
+  position: absolute;
+  top: 30%;       
+  left: 50%;      
+  transform: translate(-50%, -50%);
+ 
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+.overlay-Input {
+  width: 350px;
+  display: flex;
+  flex-direction: column;   /* input aur button ko column mai rakhne ke liye */
+  align-items: center;      /* dono ko center align karne ke liye */
+  gap: 15px;                /* input aur button ke beech thoda gap */
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(210, 195, 195);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.overlay-Input input {
+  width: 230px;
+  height: 45px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.overlay-Input button {
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff7f50, #ff4500); /* gradient color */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.overlay-Input button:hover {
+  background: linear-gradient(135deg, #ff4500, #ff7f50); /* hover effect */
+  transform: scale(1.05);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.alrmstyle {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+  filter: blur(2px);
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.mid-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffda79;;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.overlay-Input {
+  width: 90%;           /* changed width */
+  max-width: 400px;     /* max width desktop */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(210, 195, 195);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.overlay-Input input {
+  width: 100%;          /* adjust to new container */
+  max-width: 230px;
+  height: 45px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.overlay-Input button {
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.overlay-Input button:hover {
+  background: linear-gradient(135deg, #ff4500, #ff7f50);
+  transform: scale(1.05);
+}
